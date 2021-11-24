@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.layout {
+    display: grid;
+    height: 100vh;
+    grid-template: 
+    "head       head    head" 50px
+    "left-col   main    right-col" 100vh /
+     1fr        4fr     1fr;
+}
+
+.header {
+    grid-area: head;
+    text-align: center;
+    border: aqua 2px solid;
+}
+
+.left-col {
+    grid-area: left-col;
+    display: grid;
+    grid-template: 
+    "profile" 150px
+    "profile-stats" 1fr 
+    "company" 1fr
+    "events" 1fr /
+     1fr;
+    margin: 20px;
+    border-radius: 20px;
+    border: teal 2px solid;
+    background-color: yellowgreen;
+}
+
+.profile {
+    grid-area: profile;
+    margin: 5px;
+    border-radius: 10px;
+    border: black 2px solid;
+}
+
+.profile-stats {
+    grid-area: profile-stats;
+    border-radius: 10px;
+    border: grey 2px solid;
+}
+
+.company {
+    grid-area: company;
+    border-radius: 10px;
+    border: red 2px solid;
+}
+
+.events {
+    grid-area: events;
+    border-radius: 10px;
+    border: tan 2px solid;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template: 
+    "share" 100px
+    "feed" 1fr /
+     100vh;
+    border-radius: 20px;
+    border: royalblue 2px solid;
+    background-color: royalblue;
+    margin: 20px;
+}
+
+.share {
+    grid-area: share;
+    margin: 20px;
+    border-radius: 10px;
+    border: black 2px solid;
+}
+
+.feed {
+    grid-area: feed;
+    margin: 20px;
+    border-radius: 10px;
+    border: rgb(180, 93, 12) 2px solid;
+}
+
+.right-col {
+    grid-area: right-col;
+    display: grid;
+    grid-template: 
+    "news" 1fr
+    "learning-views" 1fr /
+    1fr;
+    margin: 20px;
+    background-color: yellow;
+    border-radius: 20px;
+    border: tomato 2px solid;
+}
+
+.linkedin-news {
+    grid-area: news;
+    margin: 5px;
+    border-radius: 10px;
+    border: black 2px solid;
+}
+
+.linkedin-learning {
+    grid-area: learning-views;
+    border-radius: 10px;
+    border: grey 2px solid;
+}
+
+@media screen and (max-width: 400px) {
+    .layout {
+        display: grid;
+        height: 100vh;
+        grid-template: 
+        "head       head    head" 50px
+        "left-col   main    right-col" 100vh /
+         100px       4fr     1fr;
+    }
+}
